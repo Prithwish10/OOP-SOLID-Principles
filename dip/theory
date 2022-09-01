@@ -1,0 +1,4 @@
+Dependency Inversion Principle (DIP):
+
+The principle states that we must use abstraction(abstract classes or interfaces) instead of concrete implementations. High level modules should not
+depend on low level modules, but both should depend on abstraction

@@ -1,0 +1,4 @@
+Single Responsibility Principle (SRP): 
+
+A class should have only one reason to change, which means every class should have a single responsibility/functionality to perform. 
+Implementation to multiple functionality in a single class will mash up the code.

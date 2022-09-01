@@ -1,0 +1,23 @@
+Liskov Substitution Principle (LSP):
+
+It applies to inheritance in such a way that the derived classes must be completely substitutable for their base classes. In other words, if class A
+is a subtype of class B, then we should be able to replace B with A without interrupting the behaviour of the program.
+
+Example: Suppose I have a abstract class called SocialMedia, which contains all the functionality that we do in social media(like chatWithFriends, 
+sendPhotoAndVideo, publishPosts, groupVideoCall). Suppose there are multiple clients for this SocialMedia class, like Facebook, Instagram, Whatsapp.
+Now if we build a class called Facebook and extends the SocialMedia class, and implements all the methods of the SocialMedia class (becz SocialMedia class is abstract),
+then we can say that Facebook(base class) is a substitute of SocialMedia(parent)
+Now say we create a Whatsapp class that also extends the SocialMedia class, and implements all the methods of the SocialMedia class. But the thing is
+whatsapp dont have the functionality to publish posts, but since we have extended the SocialMedia class so we had to override the publishPosts method
+in Whatsapp class. This means that Whatsapp cannot be a substitute of SocialMedia. Therefore it doesnot support LSP.
+Similarly if we create a class called Instagram that also extends the SocialMedia class, and implements all the methods of the SocialMedia class. 
+But instagram dosent support the group video call functionality but since we have extended the SocialMedia class so we had to override the
+groupVidoCall function. This means that Instagram cannot be a substitute of SocialMedia. Therefore it doesnot support LSP.
+
+How to overcome this?
+> Create an interface called SocialMedia which will only contain the common functionality of all the SocialMedia platforms, like
+  chatWithFriends and sendPhotosAndVideos.
+> Similarly create an interface called PostMediaManager which will contain the function to publish posts.
+> Similarly create an interface called SocialVideoCallManager which will contain the function to do group video call
+> Now the classes (Facebook Instagram and Whatsapp) with implement these interfaces according to what functionality they supports, like facebook
+  supports all the functionality, so it will implement all the interfaces, similarly Instagram class will implement the SocialMedia and PostMediaManager interfaces.

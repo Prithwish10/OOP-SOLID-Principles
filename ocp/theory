@@ -1,0 +1,12 @@
+Open-Closed principle (OCP): 
+
+This principle states that, software entities like classes, models, functions should be open for extension, but closed for modification. 
+We can also say that this principle states that according to new requirement the modules should be open for extension but closed for modification. 
+This means we should be able to extend a class behavior without modifying it.
+
+Example: Lets take the same example of the Notification service that we have created under srp folder. So the NotificationService class now has 2 features,
+i.e., to send otp using mobile and email. Now say in future this NotificationService class want to implement send notification using whatsapp. So in
+that case we need to modify the code of that class. This violates the open-closed principle, which states that the module should be open for extension
+but closed for modification.
+So to follow the ocp we will is, we'll create an Interface called NotificationService, and declare the methods there. And we will create individual 
+classes that will implement the interface and those classes will do separate implementation for each OTP functionality(mobile, email or whatsapp).
