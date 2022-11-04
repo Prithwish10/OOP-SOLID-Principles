@@ -1,7 +1,7 @@
 package dip;
 
 public class ShoppingMall {
-	private BankCard bankCard;
+    private BankCard bankCard;
 
     public ShoppingMall(BankCard bankCard) {
         this.bankCard = bankCard;
