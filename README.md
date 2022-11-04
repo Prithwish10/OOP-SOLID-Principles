@@ -48,7 +48,7 @@ Now say in future if the bank want to support whatsapp OTP functionality, then w
 Hence, by doing this, the NotificationService is open for extension, but closed for modification. Therefore, now we can say that our implementation is following the OCP.
 
 ## Liskov Substitution Principle (LSP)
-It applies to inheritance in such a way that the derived classes must be completely substitutable for their base classes. In other words, if class A
+This principle states that **the derived classes must be completely substitutable for their base classes**. In other words, if class A
 is a sub-type of class B, then we should be able to replace B with A without interrupting the behavior of the program.
 
 Example: Let's say we have an Interface named `SocialMedia`, which  have 4 methods: 
