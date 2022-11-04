@@ -56,10 +56,12 @@ Example: Let's say we have an Interface named `SocialMedia`, which  have 4 metho
 * `sendPhotosAndVideos` 
 * `publishPost` 
 * `groupVideoCall`
-Now, say we have a 3 classes representing different social media platforms,
+
+Now, say we have 3 classes representing different social media platforms,
 * `Instagram`
 * `Facebook`
 * `Whatsapp`
+
 These 3 classes implement the Social media Interface, and hence override all the methods in SocialMedia Interface.
 
 ### Issue
