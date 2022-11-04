@@ -41,7 +41,7 @@ In future say this NotificationService class wants to implement send notificatio
 
 ### How to resolve this such that our implementation follows OCP ?
 * Replace the NotificationService class with an Interface, which will have the method called `sendOTP`.
-* Create separate classes classed `EmailNotificationService`, `MobileNotificationService`. And these classes will implement the NotificationService Interface.
+* Create separate implementation classes called `EmailNotificationService`, `MobileNotificationService`. And these classes will implement the NotificationService Interface.
 
 Now say in future if the bank want to support whatsapp OTP functionality, then we just need to create a seperate class called `WhatsappNotificationService` and we'll make this class implement the NotificationService interface, and hence will override the sendOTP method and will give its implementation.
 
